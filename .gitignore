@@ -1,0 +1,8 @@
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+trustvault.sqlite3
+private_uploads/
+.env

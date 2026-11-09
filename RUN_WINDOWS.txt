@@ -1,0 +1,19 @@
+FAST START (Windows PowerShell)
+1) Extract the ZIP.
+2) Open PowerShell in the TrustVault folder.
+3) Run:
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   $env:TRUSTVAULT_SECRET = "use-a-long-random-secret"
+   $env:TRUSTVAULT_AUDIT_KEY = "use-a-different-long-random-key"
+   flask --app app init-db
+   flask --app app seed-demo
+   flask --app app run
+4) Open http://127.0.0.1:5000
+5) Test:
+   pytest -q
+
+If PowerShell blocks activation, run:
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Then activate again.
